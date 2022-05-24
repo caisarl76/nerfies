@@ -43,7 +43,7 @@ from nerfies import utils
 flags.DEFINE_enum('mode', None, ['jax_cpu', 'jax_gpu', 'jax_tpu'],
                   'Distributed strategy approach.')
 
-flags.DEFINE_string('base_folder', None, 'where to store ckpts and logs')
+flags.DEFINE_string('base_folder', 'base_folder', 'where to store ckpts and logs')
 flags.mark_flag_as_required('base_folder')
 flags.DEFINE_string('data_dir', None, 'input data directory.')
 flags.DEFINE_multi_string('gin_bindings', None, 'Gin parameter bindings.')
