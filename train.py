@@ -42,12 +42,11 @@ from nerfies import utils
 
 flags.DEFINE_enum('mode', None, ['jax_cpu', 'jax_gpu', 'jax_tpu'],
                   'Distributed strategy approach.')
-
 flags.DEFINE_string('base_folder', 'base_folder', 'where to store ckpts and logs')
 flags.mark_flag_as_required('base_folder')
 flags.DEFINE_string('data_dir', None, 'input data directory.')
 flags.DEFINE_multi_string('gin_bindings', None, 'Gin parameter bindings.')
-flags.DEFINE_multi_string('gin_configs', (), 'Gin config files.')
+flags.DEFINE_multi_string('gin_configs', '/nerfies/configs/test_vrig.gin', 'Gin config files.')
 FLAGS = flags.FLAGS
 
 jax.config.parse_flags_with_absl()
